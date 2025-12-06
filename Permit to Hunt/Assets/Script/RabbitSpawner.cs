@@ -25,7 +25,7 @@ public class RabbitSpawner : MonoBehaviour
         Bounds b = mesh.bounds;
         return new Vector3(
             Random.Range(b.min.x, b.max.x),
-            0,
+            5,
             Random.Range(b.min.z, b.max.z)
         );
     }
