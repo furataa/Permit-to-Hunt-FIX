@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 48cdf2b7e5142b94eac66bb24071d899
+guid: 490db7f097e5afc408d71c9c6c72cffe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -84,7 +84,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 12
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EXIT_0
+      name: JUDUL_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 6856
-        height: 2438
+        y: 683
+        width: 1536
+        height: 341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d923493ef7e32c54e8220ab32214af3b
-      internalID: -812936478
+      spriteID: 11b61a4f8670d874e9aa67b4d421a566
+      internalID: -968598738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUDUL_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 1536
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d377a7d6122ebd146a5698c521ffef35
+      internalID: 1555972596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUDUL_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 1536
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09caa68aed716a469941d8468d28661
+      internalID: 1334969460
       vertices: []
       indices: 
       edges: []
@@ -122,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a80186dd4b46d1a4ca76142fafa654cb
+    spriteID: ab8c7c0e2dcac9741be3c7d9b66425a5
     internalID: 0
     vertices: []
     indices: 
@@ -132,7 +176,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EXIT_0: -812936478
+      JUDUL_0: -968598738
+      JUDUL_1: 1555972596
+      JUDUL_2: 1334969460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

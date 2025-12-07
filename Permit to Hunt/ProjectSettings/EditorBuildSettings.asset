@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 6553fbd6d69f110408bd1bfe57d3fa63
+  - enabled: 1
     path: Assets/Scenes/Map Utama.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
