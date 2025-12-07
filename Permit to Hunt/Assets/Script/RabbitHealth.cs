@@ -3,17 +3,18 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    int currentHealth;
 
-    private void Start()
+    public int coinReward = 10; // coin yang diberikan saat mati
+
+    void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int dmg)
+    public void TakeDamage(int damage)
     {
-        currentHealth -= dmg;
-        Debug.Log("Kelinci terkena damage! Sisa HP: " + currentHealth);
+        currentHealth -= damage;
 
         if (currentHealth <= 0)
         {
@@ -23,7 +24,13 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Kelinci mati!");
+        // Tambahkan coin ke player
+        PlayerStats player = FindObjectOfType<PlayerStats>();
+        if (player != null)
+        {
+            player.AddCoins(coinReward);
+        }
+
         Destroy(gameObject);
     }
 }

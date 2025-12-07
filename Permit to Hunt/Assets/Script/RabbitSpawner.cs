@@ -3,7 +3,7 @@ using UnityEngine;
 public class RabbitSpawner : MonoBehaviour
 {
     public GameObject rabbitPrefab;
-    public Mesh groundMesh;
+    public MeshCollider groundMesh;
     public int rabbitCount = 5;
 
     void Start()
@@ -20,7 +20,7 @@ public class RabbitSpawner : MonoBehaviour
         }
     }
 
-    Vector3 RandomPointOnMesh(Mesh mesh)
+    Vector3 RandomPointOnMesh(MeshCollider mesh)
     {
         Bounds b = mesh.bounds;
         return new Vector3(
