@@ -1,10 +1,11 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Input System baru
+using UnityEngine.InputSystem;
 
 public class CameraLook : MonoBehaviour
 {
     public float sensitivity = 200f;
     public Transform playerBody;
+    public Transform weaponHolder;
 
     float xRotation = 0f;
 
@@ -14,12 +15,11 @@ public class CameraLook : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void Update()
+    void LateUpdate()
     {
         float mouseX;
         float mouseY;
 
-        // Input System baru
         if (Mouse.current != null)
         {
             mouseX = Mouse.current.delta.ReadValue().x * sensitivity * Time.deltaTime;
@@ -27,16 +27,29 @@ public class CameraLook : MonoBehaviour
         }
         else
         {
-            // Input lama
             mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
             mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
         }
 
+        // ROTASI X (atas bawah)
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
+        // Kamera rotasi X
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+
+        // PlayerBody ikut rotasi X dan Y
+        playerBody.localRotation = Quaternion.Euler(
+            xRotation, 
+            playerBody.localRotation.eulerAngles.y + mouseX,
+            0f
+        );
+
+        // Senjata ikut kamera
+        if (weaponHolder != null)
+        {
+            weaponHolder.position = transform.position;
+            weaponHolder.rotation = transform.rotation;
+        }
     }
 }
-
